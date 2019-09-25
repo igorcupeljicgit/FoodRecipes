@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headerImage{
+    width: 100%;
+}
+.textSize{
+    font: 0.5em;
+}
+.headercontainer{
+    display:flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.selectButton{
+    background: rgb(218, 120, 84);
+    border: 1px solid rgb(218, 120, 84);
+    border-radius: 5px;
+}
+.cardStyle{
+    width: 18rem;
+}
+.categoriesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* ABOUT */
+.aboutUs{
+    text-decoration:underline;
+   
+}
+/* .abouUsP{
+    text-align: left;
+} */
+.aboutDiv{
+    width: 50%;
+    padding: 30px;
+display: inline-block;
+ text-align:left;
+}
+
+
+/* FORM */
+
+.myform{
+width: 40%;
+display: flex;
+flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+}
+.myform input,textarea{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* BUTTd */
+.btn{
+    background: orange;
+    color: aliceblue;
+    width: 30%;
+    margin: 10px auto;
+}
+
+

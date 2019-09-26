@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import {Link} from "react-router-dom";
 
 export const Header = ({sectionOneText,sectionTwoText}) => {
   return (
@@ -25,12 +23,3 @@ export const Header = ({sectionOneText,sectionTwoText}) => {
   );
 };
 
-// Header.PropTypes = {
-//     className: PropTypes.string,
-//     text: PropTypes.string,
-// };
-
-// Header.defaultProps = {
-//     className: '',
-//     text: "This is button"
-// }

@@ -35,9 +35,6 @@
     text-decoration:underline;
    
 }
-/* .abouUsP{
-    text-align: left;
-} */
 .aboutDiv{
     width: 50%;
     padding: 30px;
@@ -63,12 +60,11 @@ margin-right: auto;
     border-radius: 5px;
 }
 
-/* BUTTd */
+/* BUTTON */
 .btn{
     background: orange;
     color: aliceblue;
     width: 30%;
     margin: 10px auto;
 }
-
 

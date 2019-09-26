@@ -5,6 +5,7 @@ import { HomePageHeader } from "./HomePageHeader";
 import { Categories } from "./Categories";
 import { AboutUs } from "./AbouUs";
 import MyForm from "./Form"
+import {Footer} from "../Footer/Footer"
 
 import "./HomePage.css";
 
@@ -30,7 +31,7 @@ export class HomePage extends React.Component {
     return (
       <>
         <Header sectionOneText="#aboutus" sectionTwoText="#form"  />
-        <HomePageHeader />
+        <HomePageHeader categories={this.state.categories} />
         <div className="categoriesContainer">
           <Categories categories={this.state.categories} />
         </div>
@@ -39,6 +40,7 @@ export class HomePage extends React.Component {
         </div>
         <div id="form" >
         <MyForm />
+        <Footer/>
 
         </div>
       </>

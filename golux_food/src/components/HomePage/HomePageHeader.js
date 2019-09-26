@@ -2,7 +2,11 @@ import React from "react";
 import HEADER from "../../asset/Images/HEADER.png";
 import "./HomePage.css"
 
-export const HomePageHeader = props => {
+export const HomePageHeader = ({categories}) => {
+  if(categories.length===0){
+    return <p>Loading</p>
+    }
+    
   return (
     <>
       <section className="headercontainer">
@@ -15,8 +19,12 @@ export const HomePageHeader = props => {
             aliquip ex ea commodo consequat.
           </p>
           <select className="selectButton">
-              <option>Categories</option>
-              <option>Chicken</option>
+            {categories.map((element,index)=>{
+              return <option key={index}>{element.strCategory}</option>
+            })
+
+            }
+              
           </select>
         </div>
         <div className="col-6">

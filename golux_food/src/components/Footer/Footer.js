@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom"
 
 import LOGO from "../../asset/Images/LOGO.png";
 import FB from "../../asset/Icons/FB.png";
@@ -6,7 +7,10 @@ import INSTA from "../../asset/Icons/INSTA.png";
 
 import "./footer.css";
 
-export const Footer = () => {
+const Footer = (props) => {
+ 
+
+
   return (
     <>
       <div className="footer">
@@ -26,3 +30,5 @@ export const Footer = () => {
     </>
   );
 };
+
+export default withRouter(Footer)

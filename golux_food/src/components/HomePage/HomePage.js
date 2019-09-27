@@ -1,11 +1,11 @@
 import React from "react";
 import { FetchRandomMeal, FetchCategories } from "../../Services/FetchRecipes";
 import { Header } from "../Header/Header";
-import { HomePageHeader } from "./HomePageHeader";
+import  HomePageHeader  from "./HomePageHeader";
 import { Categories } from "./Categories";
 import { AboutUs } from "./AbouUs";
 import MyForm from "./Form"
-import {Footer} from "../Footer/Footer"
+import Footer from "../Footer/Footer"
 
 import "./HomePage.css";
 
@@ -40,9 +40,10 @@ export class HomePage extends React.Component {
         </div>
         <div id="form" >
         <MyForm />
+         </div>
         <Footer/>
 
-        </div>
+       
       </>
     );
   }

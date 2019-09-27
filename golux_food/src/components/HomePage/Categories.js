@@ -24,7 +24,7 @@ return <p>Loading</p>
             pathname: "/categorypage",
            state: { detail: element.strCategory }
           }}
-          key={element.idCategory}  className="col-3"> 
+          key={element.idCategory}  className=" cardwidth"> 
           <div className="card " >
           <img src={element.strCategoryThumb} className="card-img-top" alt="..." />
           <div className="card-body">

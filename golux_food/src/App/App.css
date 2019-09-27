@@ -1,8 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
 }
 
@@ -19,4 +30,4 @@
 
 .App-link {
   color: #09d3ac;
-}
+} */

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding:0;
+     box-sizing:border-box;
+}
+
+.headerinput{
+border:1px solid gray;
+border-radius: 5px; 
+padding:5px;
+width: 300px;
+
+}
+.headerlinks{
+    margin: 0 10px;
+}
+.loginavatar{
+    width: 25px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 766px) {
+    .headerinput{
+        width: 100%;
+    }
+    .headerlinks{
+        margin:0;
+        
+    }
+    
+}
+@media only screen and (max-width: 375px) {
+    .headerlinks{
+        margin:0 15px;
+        
+    }
+}

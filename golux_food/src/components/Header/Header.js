@@ -1,21 +1,19 @@
 import React from "react";
+import "./Header.css"
+import SearchInput from "./SearchInput"
 
 export const Header = ({sectionOneText,sectionTwoText}) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <form >
-       
-          <input
-            type="search"
-            placeholder="Search"
-        aria-label="Search"
-          />
-          </form>
-          
-        
+        <SearchInput />
         <div >
-       <a href={sectionOneText}> About Us</a>
-       <a href={sectionTwoText}> Contact</a>
+          {document.location.pathname==="/"?
+            <a className="headerlinks" href="#aboutus"><img className="loginavatar" alt="avatar" src="https://img.icons8.com/material/100/000000/login-as-user.png"/></a>:
+            <a className="headerlinks" href={this.props.history.push("/")}>Home</a>
+
+          }
+       <a className="headerlinks" href={sectionOneText}> About Us</a>
+       <a className="headerlinks" href={sectionTwoText}> Contact</a>
 
         </div>
       

@@ -1,70 +1,110 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.headerImage{
+
+/*MAIN HEADER */
+
+.headerImage {
     width: 100%;
 }
-.textSize{
+
+.textSize {
     font: 0.5em;
 }
-.headercontainer{
-    display:flex;
+
+.headercontainer {
+    display: flex;
     flex-direction: row;
+    align-items:center;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
-.selectButton{
+
+.selectButton {
     background: rgb(218, 120, 84);
     border: 1px solid rgb(218, 120, 84);
     border-radius: 5px;
 }
-.cardStyle{
+
+@media only screen and (max-width: 766px) {
+    .headercontainer {
+        display: flex;
+        flex-direction: column;
+       
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ctegories */
+
+.cardStyle {
     width: 18rem;
 }
-.categoriesContainer{
+
+.categoriesContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-/* ABOUT */
-.aboutUs{
-    text-decoration:underline;
-   
+.cardwidth {
+    width: 24%;
+    margin: 3px;
 }
-.aboutDiv{
+
+@media only screen and (max-width: 766px) {
+    .cardwidth {
+        width: 48%;
+    }
+}
+
+/* ABOUT US */
+
+.aboutUs {
+    text-decoration: underline;
+}
+
+.aboutDiv {
     width: 50%;
     padding: 30px;
-display: inline-block;
- text-align:left;
+    display: inline-block;
+    text-align: left;
 }
 
+@media only screen and (max-width: 766px) {
+    .aboutDiv {
+        width: 100%;
+        text-align: center;
 
-/* FORM */
-
-.myform{
-width: 40%;
-display: flex;
-flex-direction: column;
-margin-left: auto;
-margin-right: auto;
+    }
 }
-.myform input,textarea{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-/* BUTTON */
-.btn{
-    background: orange;
-    color: aliceblue;
-    width: 30%;
-    margin: 10px auto;
-}
-
+    /* FORM */
+    .myform {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .myform input, textarea {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 5px;
+    }
+    @media only screen and (max-width: 766px) {
+        .myform {
+            width: 80%;
+        }
+    }
+    /* BUTTON */
+    .btn {
+        background: orange;
+        color: aliceblue;
+        width: 30%;
+        margin: 10px auto;
+    }

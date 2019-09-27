@@ -14,7 +14,27 @@
 
 .logosize{
 width: 70px;
+margin:0 30px;
 }
 .imagesize{
-    width: 50px;
+    width: 40px;
+    margin: 20px;
+
+}
+.imagesize:hover{
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 766px) {
+    .imagesize{
+        width: 30px;
+        margin: 10px;
+    
+    }
+    .logosize{
+        margin: 0 20px;
+    }
+    
+
 }

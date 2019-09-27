@@ -1,16 +1,24 @@
 import React from "react"
 
- export const SearchPage=()=>{
+ class SearchPage extends React.Component{
+     constructor(props){
+        super(props)
+     }
+     render(){
+         console.log(this.props.location)
+         
+    return(
+        <>
+        <p>
+           Hello
+        </p>
+        </>
+    )
 
-return(
-    <>
-    <p>
-        hello
-    </p>
-    </>
-)
+}
 
 
 
 
 }
+export default SearchPage

@@ -8,6 +8,7 @@
 .footer{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding: 30px;
 }
@@ -27,13 +28,16 @@ margin:0 30px;
 }
 
 @media only screen and (max-width: 766px) {
+    .footer{
+        padding:10px;
+    }
     .imagesize{
         width: 30px;
-        margin: 10px;
+        margin: 7px;
     
     }
     .logosize{
-        margin: 0 20px;
+        margin: 0 10px;
     }
     
 

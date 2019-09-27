@@ -38,11 +38,8 @@
     }
 }
 
-/* Ctegories */
+/* Categories */
 
-.cardStyle {
-    width: 18rem;
-}
 
 .categoriesContainer {
     display: flex;
@@ -54,7 +51,15 @@
     width: 24%;
     margin: 3px;
 }
-
+@media only screen and (max-width: 374px) {
+    .categoriesContainer {
+    flex-direction: column;
+    }
+    .cardwidth {
+        width:100%;
+        margin:2px auto;
+    }
+}
 @media only screen and (max-width: 766px) {
     .cardwidth {
         width: 48%;

@@ -15,8 +15,9 @@ const Footer = (props) => {
     <>
       <div className="footer">
         <img className="logosize" src={LOGO} alt="logo" />
-
+          <p><b>Igor Cupeljic</b></p>
         <div>
+          
           <a href="https://www.facebook.com">
             <img className="imagesize" src={FB} alt="facebook" />
           

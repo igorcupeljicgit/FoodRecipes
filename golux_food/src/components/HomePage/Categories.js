@@ -1,12 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom"
 import "./HomePage.css";
 
 export const Categories = ({categories} )=> {
  const categoriesArray=categories
 
 
-
+const onCardClick = f => f;
 
 
 
@@ -18,24 +17,30 @@ return <p>Loading</p>
      
     <>
     
-      {categoriesArray.map(element => {
+      {categoriesArray.map((element, index) => {
       return(
-          <Link to={{
-            pathname: "/categorypage",
-           state: { detail: element.strCategory }
-          }}
-          key={element.idCategory}  className=" cardwidth"> 
-          <div className="card " >
-          <img src={element.strCategoryThumb} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <p className="card-text">
-              {element.strCategory}
-            </p>
-          </div>
-        </div>
-        </Link>
+         <Card 
+          imagePlacement='top'
+          clickHandler={onCardClick}
+          key={index}
+          data={element}
+         />
       )  ;
       })}
     </>
   );
 };
+
+
+{/* <div onClick={clickHandler}
+key={key}  className="cardwidth"
+> 
+<div className="card" >
+<img src={data.strCategoryThumb} className={imageClassName} alt="..." />
+<div className="card-body">
+  <p className="card-text">
+    {data.strCategory}
+  </p>
+</div>
+</div>
+</div> */}

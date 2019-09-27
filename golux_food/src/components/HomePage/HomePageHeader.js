@@ -6,19 +6,24 @@ import CategoryDropdown from "./CategoryDropdown";
 
 import "./HomePage.css"
 
-const HomePageHeader = ({categories}) => {
+const HomePageHeader = ({categories, history}) => {
 
- const selectcategory=()=>{
+ const selectcategory=(wantedCategory)=>{
   //  const wantedCategory=event.target.strCategory
-    this.props.history.push("/searchpage")
+  console.log('option is clicked!', wantedCategory);
+    history.push({
+      pathname:"/categorypage",
+      state:{detail: wantedCategory}
+    });
   }
-  if(categories.length===0){
+
+  if(!categories.length){
     return <p>Loading</p>
     }
     
   return (
     <>
-      <section className="headercontainer">
+      <section className="headercontainer" id='home'>
         <div className="col-md-6">
           <h1>Food recipes</h1>
           <p className="textSize">

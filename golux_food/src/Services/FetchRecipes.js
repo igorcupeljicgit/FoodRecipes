@@ -1,4 +1,4 @@
-import {Category,Meal}  from "../../src/entites"
+import { Meal } from "../../src/entites"
 
 const API_BASE="https://www.themealdb.com/api/json/v1/1"
 
@@ -21,6 +21,7 @@ export const FetchSingleCategory=(data)=>{
    const category=fetch(`${API_BASE}/filter.php?c=${data}`)
    .then(response=>response.json())
    .then(response=>{
+      console.log('cat response: ', response);
       const myArr=response.meals.map(meal=>{
         
            const {idMeal,strMeal,strMealThumb}=meal

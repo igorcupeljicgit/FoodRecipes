@@ -1,6 +1,6 @@
-import React from "react";
+import React, {createRef} from "react";
 import { FetchRandomMeal, FetchCategories } from "../../Services/FetchRecipes";
-import { Header } from "../Header/Header";
+import  Header from "../Header/Header";
 import  HomePageHeader  from "./HomePageHeader";
 import { Categories } from "./Categories";
 import { AboutUs } from "./AbouUs";
@@ -28,6 +28,9 @@ export class HomePage extends React.Component {
   }
 
   render() {
+    // const elementId = this.props.history.location.state.elementId;
+    // const $elementToScrollTo = document.getElementById(elementId);
+    // $elementToScrollTo.scrollIntoView();
     return (
       <>
         <Header sectionOneText="#aboutus" sectionTwoText="#form"  />
@@ -42,8 +45,6 @@ export class HomePage extends React.Component {
         <MyForm />
          </div>
         <Footer/>
-
-       
       </>
     );
   }

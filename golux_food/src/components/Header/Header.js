@@ -7,9 +7,9 @@ export const Header = ({sectionOneText,sectionTwoText}) => {
     <nav className="navbar navbar-light bg-light">
         <SearchInput />
         <div >
-          {document.location.pathname==="/"?
+          {document.location.pathname=="/" ?
             <a className="headerlinks" href="#aboutus"><img className="loginavatar" alt="avatar" src="https://img.icons8.com/material/100/000000/login-as-user.png"/></a>:
-            <a className="headerlinks" href={this.props.history.push("/")}>Home</a>
+            <a className="headerlinks" href="#form">Home</a>
 
           }
        <a className="headerlinks" href={sectionOneText}> About Us</a>

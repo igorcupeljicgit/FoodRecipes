@@ -1,5 +1,6 @@
 import React from "react"
 import {withRouter} from "react-router-dom"
+import "./Header.css"
 
 class Searchinput extends React.Component{
     constructor(props){

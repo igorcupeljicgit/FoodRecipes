@@ -22,11 +22,6 @@
     margin-bottom: 20px;
 }
 
-.selectButton {
-    background: rgb(218, 120, 84);
-    border: 1px solid rgb(218, 120, 84);
-    border-radius: 5px;
-}
 
 @media only screen and (max-width: 766px) {
     .headercontainer {
@@ -37,35 +32,6 @@
         margin-bottom: 20px;
     }
 }
-
-/* Categories */
-
-
-/* .categoriesContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.cardwidth {
-    width: 24%;
-    margin: 3px;
-}
-@media only screen and (max-width: 374px) {
-    .categoriesContainer {
-    flex-direction: column;
-    }
-    .cardwidth {
-        width:100%;
-        margin:2px auto;
-    }
-}
-@media only screen and (max-width: 766px) {
-    .cardwidth {
-        width: 48%;
-    }
-} */
-
 /* ABOUT US */
 
 .aboutUs {
@@ -110,6 +76,6 @@
     .btn {
         background: orange;
         color: aliceblue;
-        width: 30%;
+        padding: 5px 20px;
         margin: 10px auto;
     }

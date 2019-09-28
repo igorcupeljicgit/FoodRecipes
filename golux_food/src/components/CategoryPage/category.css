@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 20px;
     text-align: left;
 }
@@ -22,6 +22,13 @@
     width: 24%;
     margin: 3px;
 }
+.cardwidthrecommendation{
+    width: 35%;
+    margin: 3px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
 @media only screen and (max-width: 374px) {
     .categoriesContainer {
     flex-direction: column;
@@ -30,9 +37,23 @@
         width:100%;
         margin:2px auto;
     }
+    .cardandsearch{
+        text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 0 20px;
+    }
 }
 @media only screen and (max-width: 766px) {
     .cardwidth {
         width: 48%;
     }
+    .cardandsearch{
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        padding: 0 20px;
+        }
+    
 }

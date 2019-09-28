@@ -48,7 +48,3 @@ export default withRouter(HomePageHeader)
 
 
 
-    // this.props.history.push({
-      // pathname:"/categorypage",
-      // state:{category:wantedCategory}
-    // })

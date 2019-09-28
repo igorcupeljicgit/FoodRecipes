@@ -21,7 +21,6 @@ export const FetchSingleCategory=(data)=>{
    const category=fetch(`${API_BASE}/filter.php?c=${data}`)
    .then(response=>response.json())
    .then(response=>{
-      console.log('cat response: ', response);
       const myArr=response.meals.map(meal=>{
         
            const {idMeal,strMeal,strMealThumb}=meal

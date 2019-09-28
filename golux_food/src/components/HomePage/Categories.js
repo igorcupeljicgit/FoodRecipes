@@ -1,22 +1,21 @@
 import React from "react";
-import {Card} from "react"
+import Card from "../../components/Card/Card"
 import {withRouter} from "react-router-dom"
 import "./HomePage.css";
 
-export const Categories = ({categories} )=> {
- const categoriesArray=categories
-console.log("categories",categories)
+const Categories = ({categories,history} )=> {
+  const categoriesArray=categories
 
-const onCardClick = ()=> {
-  this.props.history.push({
+    const onCardClick = (data)=> {
+    history.push({
     pathname:"/categorypage",
-    state:{detail:"dss"}
-  })
-};
+    state:{detail:data.strCategory}
+    })
+    };
 
-if(categoriesArray.length===0){
-return <p>Loading</p>
-}
+  if(categoriesArray.length===0){
+  return <p>Loading</p>
+  }
  
   return (
      
@@ -24,12 +23,15 @@ return <p>Loading</p>
     
       {categoriesArray.map((element, index) => {
       return(
+       
+
          <Card 
-         type="categorie"
+          type="categorie"
           clickHandler={onCardClick}
           key={index}
           data={element}
-         />
+          />
+          
       )  ;
       })}
     </>

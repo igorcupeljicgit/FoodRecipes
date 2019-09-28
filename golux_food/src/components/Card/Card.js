@@ -1,16 +1,18 @@
 import React from "react"
+import {withRouter} from "react-router-dom" 
 import "./card.css"
 
-export const Card =({clickHandler,key,data,type})=>{
+const Card =({clickHandler,key,data,type})=>{
 
 
     return(
         <>
 
-        {type==="categorie"}? <div onClick={clickHandler}
+        {(type==="categorie") ? 
+        <div onClick={()=>clickHandler(data)}
             key={key}  className="cardwidth"> 
             <div className="card" >
-                <img src={data.strCategoryThumb} className="" alt="..." />
+                <img src={data.strCategoryThumb} className="card-img-top" alt="..." />
                 <div className="card-body">
                 <p className="card-text">
                 {data.strCategory}
@@ -19,17 +21,19 @@ export const Card =({clickHandler,key,data,type})=>{
             </div>
         </div>
         :
-        <div onClick={clickHandler}
+        <div onClick={()=>clickHandler(data)}
             key={key}  className="cardwidth"> 
             <div className="card" >
-                <img src={data.image} className="" alt="..." />
+                <img src={data.image} className="card-img-top" alt="..." />
                 <div className="card-body">
                 <p className="card-text">
                 {data.name}
                 </p>
                 </div>
             </div>
-        </div>
+        </div>}
         </>
     )
 }
+
+export default withRouter(Card)

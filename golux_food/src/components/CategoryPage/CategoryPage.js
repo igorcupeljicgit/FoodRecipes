@@ -48,7 +48,7 @@ import "./category.css"
       <MainBlok categorie={cat} />
   
       </div>
-      <Footer/>
+      
       </>
       : <h1>Loading...</h1>
   );

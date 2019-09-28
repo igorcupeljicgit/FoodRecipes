@@ -1,13 +1,18 @@
 import React from "react";
+import {Card} from "react"
+import {withRouter} from "react-router-dom"
 import "./HomePage.css";
 
 export const Categories = ({categories} )=> {
  const categoriesArray=categories
+console.log("categories",categories)
 
-
-const onCardClick = f => f;
-
-
+const onCardClick = ()=> {
+  this.props.history.push({
+    pathname:"/categorypage",
+    state:{detail:"dss"}
+  })
+};
 
 if(categoriesArray.length===0){
 return <p>Loading</p>
@@ -20,7 +25,7 @@ return <p>Loading</p>
       {categoriesArray.map((element, index) => {
       return(
          <Card 
-          imagePlacement='top'
+         type="categorie"
           clickHandler={onCardClick}
           key={index}
           data={element}
@@ -31,16 +36,5 @@ return <p>Loading</p>
   );
 };
 
+export default withRouter(Categories)
 
-{/* <div onClick={clickHandler}
-key={key}  className="cardwidth"
-> 
-<div className="card" >
-<img src={data.strCategoryThumb} className={imageClassName} alt="..." />
-<div className="card-body">
-  <p className="card-text">
-    {data.strCategory}
-  </p>
-</div>
-</div>
-</div> */}

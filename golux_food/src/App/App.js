@@ -5,6 +5,7 @@ import { HomePage } from "../components/HomePage/HomePage";
 import  SearchPage  from "../components/SearchPage/SearchPage";
 import { SingleMeal } from "../components/SingleMealPage/SingleMeal";
 import  CategoryPage  from "../components/CategoryPage/CategoryPage";
+import Footer from "../components/Footer/Footer"
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/singlemeal" component={SingleMeal} />
         <Route path="/" component={HomePage} />
       </Switch>
+      <Footer/>
     </div>
   );
 }

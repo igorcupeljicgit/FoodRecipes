@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import {withRouter} from "react-router-dom"
 
  class SearchPage extends React.Component{
      constructor(props){
@@ -21,4 +22,4 @@ import React from "react"
 
 
 }
-export default SearchPage
+export default withRouter(SearchPage)

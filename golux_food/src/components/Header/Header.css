@@ -27,7 +27,7 @@ width: 300px;
     z-index: 1;
     top: 100%;
     right: 10%;
-    border:2px solid rgb(146, 140, 138);
+    border:2px solid rgb(99, 153, 140);
     border-radius: 5px;
     background: rgb(144, 214, 193);
     padding: 5px;
@@ -35,6 +35,14 @@ width: 300px;
 
 }
 
+.searchicon{
+   margin: 0 5px;
+    background:none;
+    width: 29px;
+}
+.searchiconimage{
+    padding: 5px;
+}
 .logininput{
     border-radius: 5px;
     padding: 2px;

@@ -3,7 +3,6 @@ import {MesureTable} from "./MesureTable"
 import "./singlemeal.css"
 
 const SingleMealItem=({mealItem})=>{
-    console.log("single meal page",mealItem[0])
     const meal=mealItem[0]
     return(
         
@@ -23,7 +22,7 @@ const SingleMealItem=({mealItem})=>{
                 <p className="textsize">{meal.instuctions}</p>
             </div>
         </div>
-            <MesureTable/> </>
+            <MesureTable mealItem={mealItem}/> </>
             :
             
             <h2>Loading...</h2>

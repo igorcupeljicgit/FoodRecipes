@@ -4,7 +4,6 @@ import {withRouter} from "react-router-dom"
 import Card from "../Card/Card"
 import {FetchMealById,FetchSingleCategory} from "../../Services/FetchRecipes"
 import SingleMealItem from "./SingleMealItem"
-import RandomMeal from "../RandomMeal/RandomMeal"
 import "./singlemeal.css"
 
 class SingleMeal extends React.Component{
@@ -22,7 +21,7 @@ class SingleMeal extends React.Component{
       const categ=this.props.history.location.state.category
       FetchMealById(id).then(response=>this.setState({wantedMeal:response}));
       FetchSingleCategory(categ).then(response=>{
-        const reducedArray=response.slice(0,3);
+        const reducedArray=response.slice(0,4);
         this.setState({radnomMeals:reducedArray})})
   }
   

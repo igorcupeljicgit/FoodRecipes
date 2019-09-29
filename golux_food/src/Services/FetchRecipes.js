@@ -37,9 +37,11 @@ export const FetchMealById=(id)=>{
    .then(response=>response.json())
    .then(response=>{
       const myArr=response.meals.map(meal=>{
-      console.log("zadnji fetch",response)
-      const {idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags}=meal
-      return new Meal(idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags)
+         const {idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,strIngredient1,strIngredient2,strIngredient3,strMeasure1,strMeasure2,strMeasure3}=meal
+      
+         const mesureArr=[strMeasure1,strMeasure2,strMeasure3]
+         const ingrediantArr=[strIngredient1,strIngredient2,strIngredient3]
+      return new Meal(idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,ingrediantArr,mesureArr)
    })
    return myArr
 })

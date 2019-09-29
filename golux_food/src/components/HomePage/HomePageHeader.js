@@ -9,8 +9,6 @@ import "./HomePage.css"
 const HomePageHeader = ({categories, history}) => {
 
  const selectcategory=(wantedCategory)=>{
-  //  const wantedCategory=event.target.strCategory
-  console.log('option is clicked!', wantedCategory);
     history.push({
       pathname:"/categorypage",
       state:{detail: wantedCategory}

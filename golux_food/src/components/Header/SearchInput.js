@@ -24,23 +24,13 @@ class Searchinput extends React.Component{
             state:{data:this.state.searchValue}
         })
     }
-    // componentDidUpdate(prevProps,prevState){
-    //     if(prevState!==this.state){
-    //         const {searchValue,categorie}=this.state;
-    //         const filteredMeals=categorie.filter(meal=>{
-    //             if(meal.name){ return meal.name.toLowerCase().indexOf(searchValue.toLowerCase())!== -1 }})
-    //             console.log(filteredMeals)
-    //     }
-    // }
     render(){
         console.log(this.state)
         const {searchValue,categorie}=this.state;
-        // const filteredMeals=categorie.filter(meal=>{
-        //     if(meal.name){ return meal.name.toLowerCase().indexOf(searchValue.toLowerCase())!== -1 }})
-            
+       
        
         return(
-            <form onSubmit={this.onSubmitInput} action="#" >
+           <span>
             <input
             type="search"
             placeholder="Search recepies"
@@ -49,25 +39,12 @@ class Searchinput extends React.Component{
             onChange={this.searchData}
             className="headerinput"
           />
-            </form>
+          <img className="searchicon"  onClick={this.onSubmitInput} src="https://img.icons8.com/metro/35/000000/search.png"/>
+            </span>
         )
     }
 }
 export default withRouter(Searchinput);
 
 
-
-// filterUsers = (event) => {
-//     this.setState({
-//         searchInput: event.target.value,
-//     })
-// }
-
-
-
-// render() {
-//     const { users, searchInput } = this.state
-
-//     const filteredUsers = users.filter((user) => {
-//         if (user.name){ return user.name.toLowerCase().indexOf(searchInput.toLowerCase()) !== -1} });
 

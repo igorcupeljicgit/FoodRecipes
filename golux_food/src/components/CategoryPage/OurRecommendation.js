@@ -17,7 +17,7 @@ export const OurRecommendation=({categoryName,randomMeal,categorie})=>{
                 <p>{randomMeal.name}</p>
             </div>
             <div>
-                <SearchInput categorie={categorie} />
+                {/* <SearchInput categorie={categorie} /> */}
             </div>
         </section>
         

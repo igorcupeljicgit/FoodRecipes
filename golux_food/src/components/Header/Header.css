@@ -13,11 +13,31 @@ width: 300px;
 }
 .headerlinks{
     margin: 0 10px;
+    display: inline;
 }
 .loginavatar{
     width: 25px;
     border: 1px solid gray;
     border-radius: 50%;
+}
+.loginform{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 10%;
+    border:2px solid rgb(146, 140, 138);
+    border-radius: 5px;
+    background: rgb(144, 214, 193);
+    padding: 5px;
+   
+
+}
+
+.logininput{
+    border-radius: 5px;
+    padding: 2px;
 }
 @media only screen and (max-width: 766px) {
     .headerinput{

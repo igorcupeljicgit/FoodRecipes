@@ -28,7 +28,11 @@ export class HomePage extends React.Component {
        return this.setState({categories:categories.categories});
     });
   }
-
+// componentDidUpdate=(prevProps,prevState)=>{
+// if(prevState!==this.state){
+//   this.render()
+// }
+// }
 
   render() {
     return (

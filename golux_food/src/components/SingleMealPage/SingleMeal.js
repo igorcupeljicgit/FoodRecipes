@@ -29,7 +29,7 @@ class SingleMeal extends React.Component{
   componentDidUpdate=(prevProps,prevState)=>{
     const id=this.props.history.location.state.id
 
-    if(prevProps==this.props.history.location.state.id){
+    if(prevProps===this.props.history.location.state.id){
       FetchMealById(id).then(response=>this.setState({wantedMeal:response}));
 
   }

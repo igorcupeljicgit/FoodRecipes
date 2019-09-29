@@ -1,6 +1,8 @@
-import React from "react"
-import {MesureTable} from "./MesureTable"
-import "./singlemeal.css"
+import React from "react";
+
+import {MesureTable} from "./MesureTable";
+
+import "./singlemeal.css";
 
 const SingleMealItem=({mealItem})=>{
     const meal=mealItem[0]

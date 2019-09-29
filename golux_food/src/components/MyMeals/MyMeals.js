@@ -1,4 +1,5 @@
 import React from "react"
+
 import {FetchRandomMeal} from "../../Services/FetchRecipes"
 
 class MyMeals extends React.Component{
@@ -13,7 +14,6 @@ class MyMeals extends React.Component{
         .then(response=>this.setState({myRandomMeal:response[0]}))
     }
 render(){
-    console.log("my meal",this.state.myRandomMeal)
     const {myRandomMeal}=this.state
      return(
         <>

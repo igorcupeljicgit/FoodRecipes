@@ -1,5 +1,7 @@
 import React from "react";
-import {Button} from "../Button"
+
+import {Button} from "../Button";
+
 import "./HomePage.css"
 
 class MyForm extends React.Component {

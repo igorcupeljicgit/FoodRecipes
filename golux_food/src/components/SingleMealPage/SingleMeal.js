@@ -1,10 +1,11 @@
 import React from "react"
-import {withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom";
 
-import Card from "../Card/Card"
-import {FetchMealById,FetchSingleCategory} from "../../Services/FetchRecipes"
-import SingleMealItem from "./SingleMealItem"
-import "./singlemeal.css"
+import Card from "../Card/Card";
+import {FetchMealById,FetchSingleCategory} from "../../Services/FetchRecipes";
+import SingleMealItem from "./SingleMealItem";
+
+import "./singlemeal.css";
 
 class SingleMeal extends React.Component{
         constructor(props){

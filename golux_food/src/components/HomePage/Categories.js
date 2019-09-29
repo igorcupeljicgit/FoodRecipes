@@ -1,6 +1,8 @@
 import React from "react";
-import Card from "../../components/Card/Card"
 import {withRouter} from "react-router-dom"
+
+import Card from "../../components/Card/Card"
+
 import "./HomePage.css";
 
 const Categories = ({categories,history} )=> {

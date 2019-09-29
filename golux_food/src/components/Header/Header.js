@@ -1,11 +1,11 @@
 import React from "react";
 import {withRouter, Link} from 'react-router-dom';
-import "./Header.css"
+
 import SearchInput from "./SearchInput"
 import Avatar from "./Avatar";
 
+import "./Header.css"
 const Header = ({ history}) => {
-  console.log('path name: ', history.location.pathname);
   const path=history.location.pathname;
   const checkLog=localStorage.getItem("LogIn")
 

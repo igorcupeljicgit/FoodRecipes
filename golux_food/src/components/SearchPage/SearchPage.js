@@ -1,7 +1,8 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
-import {FetchByName} from "../../Services/FetchRecipes"
-import Card from '../Card/Card'
+
+import {FetchByName} from "../../Services/FetchRecipes";
+import Card from '../Card/Card';
 
 import "./searchpage.css"
 
@@ -30,7 +31,7 @@ import "./searchpage.css"
      render(){
 
          const {searchResult,randomMeal}=this.state
-         console.log("State",randomMeal)
+         
     return(
         <>
         {randomMeal?

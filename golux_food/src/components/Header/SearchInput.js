@@ -1,5 +1,6 @@
 import React from "react"
 import {withRouter} from "react-router-dom"
+
 import "./Header.css"
 
 class Searchinput extends React.Component{
@@ -15,7 +16,6 @@ class Searchinput extends React.Component{
     }
     searchData=(event)=>{
         let value=event.target.value
-        console.log("value",value)
         this.setState({searchValue:value})
     }
     onSubmitInput=()=>{
@@ -25,7 +25,6 @@ class Searchinput extends React.Component{
         })
     }
     render(){
-        console.log(this.state)
         const {searchValue,categorie}=this.state;
        
        

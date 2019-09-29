@@ -1,5 +1,7 @@
 import React from "react";
-import ABOUTUS from "../../asset/Images/ABOUTUS.jpg"
+
+import ABOUTUS from "../../asset/Images/ABOUTUS.jpg";
+
 import "../HomePage/HomePage.css";
 
 export const AboutUs = () => {

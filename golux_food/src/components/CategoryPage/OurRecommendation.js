@@ -1,5 +1,4 @@
 import React from "react"
-import SearchInput from "../Header/SearchInput"
 
 import "./category.css"
 
@@ -17,7 +16,7 @@ export const OurRecommendation=({categoryName,randomMeal,categorie})=>{
                 <p>{randomMeal.name}</p>
             </div>
             <div>
-                {/* <SearchInput categorie={categorie} /> */}
+                <input className="inputsearch" placeholder="Search in this categ" type="text" />
             </div>
         </section>
         

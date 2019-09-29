@@ -1,5 +1,6 @@
-import React from "react"
-import "./singlemeal.css"
+import React from "react";
+
+import "./singlemeal.css";
 
 export const MesureTable=({mealItem})=>{
 

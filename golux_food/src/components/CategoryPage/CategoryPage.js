@@ -20,7 +20,6 @@ import "./category.css"
 
    componentDidMount=()=>{
     const data=this.props.location.state.detail
-    console.log('selected cat: ', data);
     FetchSingleCategory(data)
     .then(response=>{
       return this.setState({categorie:response})

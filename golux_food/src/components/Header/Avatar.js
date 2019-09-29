@@ -1,5 +1,7 @@
 import React from "react"
+
 import LogInForm from "./LogInForm"
+
 import "./Header.css"
 
 
@@ -15,9 +17,6 @@ class Avatar extends React.Component{
         const {isVisible}=this.state
         this.setState({isVisible:!isVisible})
     
-    }
-    componentDidMount=()=>{
-        console.log("Mount")
     }
     render(){
         

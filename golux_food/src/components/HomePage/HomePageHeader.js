@@ -1,7 +1,7 @@
 import React from "react";
-import HEADER from "../../asset/Images/HEADER.png";
 import { withRouter} from 'react-router-dom'
 
+import HEADER from "../../asset/Images/HEADER.png";
 import CategoryDropdown from "./CategoryDropdown";
 
 import "./HomePage.css"

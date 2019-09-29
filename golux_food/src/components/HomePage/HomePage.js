@@ -28,7 +28,7 @@ export class HomePage extends React.Component {
        return this.setState({categories:categories.categories});
     });
   }
-
+  
   render() {
     return (
       <>

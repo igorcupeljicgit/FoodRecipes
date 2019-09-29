@@ -20,17 +20,14 @@ else{
 }
 onClickHandler=()=>{
 localStorage.setItem("LogIn",JSON.stringify(this.state))
-console.log(this.state)
 
 }
 logOutHandler=()=>{
     localStorage.removeItem("LogIn")
 }
 render(){
-    console.log(this.state)
     const {email,password}=this.state
     const checkIfLogedIn=localStorage.getItem("LogIn")
-    console.log(checkIfLogedIn)
      return(
             checkIfLogedIn?
             <form className="loginform">

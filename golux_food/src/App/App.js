@@ -7,6 +7,7 @@ import  SingleMeal  from "../components/SingleMealPage/SingleMeal";
 import  CategoryPage  from "../components/CategoryPage/CategoryPage";
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header";
+import MyMeals from "../components/MyMeals/MyMeals";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
+        <Route path="/mymeals" component={MyMeals} />
         <Route path="/categorypage" component={CategoryPage} />
         <Route path="/searchpage" component={SearchPage} />
         <Route path="/singlemeal" component={SingleMeal} />

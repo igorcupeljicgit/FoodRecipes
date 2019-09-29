@@ -6,7 +6,16 @@ export const FetchRandomMeal= ()=>{
 
    const fetchSingle= fetch(`${API_BASE}/random.php`)
    .then(response=>response.json())
-   .then(response=>response)
+   .then(response=>{
+      const myArr=response.meals.map(meal=>{
+         const {idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,strIngredient1,strIngredient2,strIngredient3,strMeasure1,strMeasure2,strMeasure3}=meal
+      
+         const mesureArr=[strMeasure1,strMeasure2,strMeasure3]
+         const ingrediantArr=[strIngredient1,strIngredient2,strIngredient3]
+      return new Meal(idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,ingrediantArr,mesureArr)
+   })
+   return myArr
+   })
    return fetchSingle
 
 }
@@ -46,4 +55,21 @@ export const FetchMealById=(id)=>{
    return myArr
 })
    return mealId
+}
+
+export const FetchByName=(data)=>{
+   const fetchByName=fetch(`${API_BASE}/search.php?s=${data}`)
+   .then(response=>response.json())
+   .then(response=>{
+
+      const myArr=response.meals.map(meal=>{
+         const {idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,strIngredient1,strIngredient2,strIngredient3,strMeasure1,strMeasure2,strMeasure3}=meal
+      
+         const mesureArr=[strMeasure1,strMeasure2,strMeasure3]
+         const ingrediantArr=[strIngredient1,strIngredient2,strIngredient3]
+      return new Meal(idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags,ingrediantArr,mesureArr)
+   })
+   return myArr
+   })
+return fetchByName
 }

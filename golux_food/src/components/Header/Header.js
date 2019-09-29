@@ -7,7 +7,7 @@ import Avatar from "./Avatar";
 const Header = ({ history}) => {
   console.log('path name: ', history.location.pathname);
   const path=history.location.pathname;
-  
+  const checkLog=localStorage.getItem("LogIn")
 
   return (
     <nav className="navbar navbar-light bg-light">
@@ -25,6 +25,9 @@ const Header = ({ history}) => {
           }
        <a className="headerlinks" href="#aboutus"> About Us</a>
        <a className="headerlinks" href="#form"> Contact</a>
+       {checkLog ? 
+       <Link to="/mymeals">My</Link>
+       :null}
 
         </div>
       

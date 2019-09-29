@@ -26,6 +26,7 @@ const Categories = ({categories,history} )=> {
        
 
          <Card 
+         className=""
           type="categorie"
           clickHandler={onCardClick}
           key={index}

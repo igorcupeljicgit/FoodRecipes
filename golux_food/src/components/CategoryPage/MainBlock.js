@@ -1,9 +1,20 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import Card from "../Card/Card"
+import {withRouter} from "react-router-dom"
 import "./category.css"
 
-export const MainBlok = ({categorie} )=> {
+const MainBlok = ({categorie,history,categorySearch} )=> {
  
+const onCardClick=(data)=>{
+  history.push({
+    pathname:"/singlemeal",
+    state:{id:data.id ,
+          category:categorySearch}})
+
+}
+
+
+
   if(categorie.length===0){
         return <p>Loading</p>
         }
@@ -12,25 +23,21 @@ export const MainBlok = ({categorie} )=> {
      <>
 
        
-         {categorie.map(element => {
+         {categorie.map((element,index) => {
          return(
-             <Link to={{
-               pathname: "/singlemeal",
-              state: { id: element.id }
-             }}
-             key={element.id}  className=" cardwidth"> 
-             <div className="card " >
-             <img src={element.image} className="card-img-top" alt="..." />
-             <div className="card-body">
-               <p className="card-text">
-                 {element.name}
-               </p>
-             </div>
-           </div>
-           </Link>
-         )  ;
-         })}
+          
+          <Card 
+         
+          type="meal"
+          clickHandler={onCardClick}
+          key={index}
+          data={element}
+          />
+         )})}
+
       </>
      )
 };
+
+export default withRouter(MainBlok)
    

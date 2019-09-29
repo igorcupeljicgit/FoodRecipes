@@ -3,14 +3,15 @@ import {withRouter, Link} from 'react-router-dom';
 import "./Header.css"
 import SearchInput from "./SearchInput"
 
-const Header = ({sectionOneText,sectionTwoText, history}) => {
+const Header = ({ history}) => {
   console.log('path name: ', history.location.pathname);
+  const path=history.location.pathname;
   return (
     <nav className="navbar navbar-light bg-light">
         <SearchInput />
         <div >
-          {history.location.pathname==="/" ?
-            <a className="headerlinks" href="#aboutus"><img className="loginavatar" alt="avatar" src="https://img.icons8.com/material/100/000000/login-as-user.png"/></a>:
+          {(path==="/" || path==="/aboutus" || path==="/form") ?
+            <a className="headerlinks" href="#"><img className="loginavatar" alt="avatar" src="https://img.icons8.com/material/100/000000/login-as-user.png"/></a>:
             <Link className="headerlinks" to={{
               pathname: '/',
               state: {
@@ -19,8 +20,8 @@ const Header = ({sectionOneText,sectionTwoText, history}) => {
             }}>Home</Link>
 
           }
-       <a className="headerlinks" href={"#aboutus"}> About Us</a>
-       <a className="headerlinks" href={sectionTwoText}> Contact</a>
+       <a className="headerlinks" href="#aboutus"> About Us</a>
+       <a className="headerlinks" href="#form"> Contact</a>
 
         </div>
       

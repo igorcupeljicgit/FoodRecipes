@@ -21,6 +21,7 @@ export const FetchSingleCategory=(data)=>{
    const category=fetch(`${API_BASE}/filter.php?c=${data}`)
    .then(response=>response.json())
    .then(response=>{
+      console.log("similar",response)
       const myArr=response.meals.map(meal=>{
         
            const {idMeal,strMeal,strMealThumb}=meal
@@ -29,4 +30,18 @@ export const FetchSingleCategory=(data)=>{
       return myArr
    })
    return category
+}
+
+export const FetchMealById=(id)=>{
+   const mealId=fetch(`${API_BASE}/lookup.php?i=${id}`)
+   .then(response=>response.json())
+   .then(response=>{
+      const myArr=response.meals.map(meal=>{
+      console.log("zadnji fetch",response)
+      const {idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags}=meal
+      return new Meal(idMeal,strMeal,strMealThumb,strCategory,strArea,strInstructions,strTags)
+   })
+   return myArr
+})
+   return mealId
 }
